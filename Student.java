@@ -1,16 +1,18 @@
 import java.util.*;
-public class Student{   
+
+public class Student {
 
     private String firstName;
     private String lastName;
-
+    private String studentID;
     private int classification;
-    private int studentID;
+    private static int id = 2000;
+    private static int courseAmt = 600;
     private String courses;
     private int tuitBalance;
-    private int courseAmt = 600;
-    //prompt user to enter name and classifcation year
-    public Student(){
+
+    // prompt user to enter name and classifcation year
+    public Student() {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter student's first name.");
         this.firstName = in.nextLine();
@@ -20,16 +22,26 @@ public class Student{
 
         System.out.print("1 - Freshmen\n2 - Sophomore\n3 - Junior\n4 - Senior\nEnter student class level: ");
         this.classification = in.nextInt();
-        System.out.println(firstName + " " + lastName + " " + classification);
+
+        setStudentID();
+
+        System.out.println(firstName + " " + lastName + " " + classification + " " + studentID);
+        
+        
     }
-    //generate user id
+    // generate user id
+    private void setStudentID(){
+        //grade level + ID
+        id++;
+        this.studentID = classification + "" + id;
+    }
 
-    //enroll in courses
+    // enroll in courses
 
-    //view balance
+    // view balance
 
-    //pay tuition
+    // pay tuition
 
-    //show status
+    // show status
 
 }
