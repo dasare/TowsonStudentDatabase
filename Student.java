@@ -27,8 +27,6 @@ public class Student {
 
         setStudentID();
 
-        System.out.println(firstName + " " + lastName + " " + classification + " " + studentID);
-
     }
 
     // generate user id
@@ -43,20 +41,20 @@ public class Student {
         // Enter loop. User hits zero to exit.
         do {
             Scanner in = new Scanner(System.in);
-            System.out.println("Enter course to enroll(Q to quit)");
+            System.out.print("Enter course to enroll (Q to quit): ");
             String course = in.nextLine();
 
             // prompt user for courses until Q is selected
             if (!course.equals("Q")) {
-                courses = courses + "\n" + course;
+                courses = courses + "\n " + course;
                 tuitBalance = tuitBalance + courseAmt;
             } else {
                 break;
             }
         } while (1 != 0);
         System.out.println();
-        System.out.println("Enrolled in: " + courses);
-        //System.out.println("Tuition Amt: " + tuitBalance);
+
+        // System.out.println("Tuition Amt: " + tuitBalance);
     }
 
     // view balance
@@ -76,8 +74,7 @@ public class Student {
     }
 
     // show status
-    public String acctInfo(){
-        return "Name: " + firstName + " " + lastName + 
-        "\nCourses Enrolled:" + courses + "\nBalance: $" + tuitBalance;
+    public String acctInfo() {
+        return "Name: " + firstName + " " + lastName + "\nGrade Level: " + classification + "\nStudent ID: " + id + "\nCourses Enrolled:" + courses + "\nBalance: $" + tuitBalance;
     }
 }
