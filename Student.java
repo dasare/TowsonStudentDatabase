@@ -16,6 +16,7 @@ public class Student {
     // prompt user to enter name and classifcation year
     public Student() {
         Scanner in = new Scanner(System.in);
+        System.out.println();
         System.out.print("Enter student's first name: ");
         this.firstName = in.nextLine();
 
@@ -66,7 +67,7 @@ public class Student {
     public void payTuition() {
         viewBalance();
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter your payment amount $");
+        System.out.print("Enter your payment amount: $");
         int payment = in.nextInt();
         tuitBalance = tuitBalance - payment;
         System.out.println("Thank you for your payment of $" + payment);
