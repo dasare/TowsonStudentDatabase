@@ -46,7 +46,8 @@ public class Student {
             System.out.println("Enter course to enroll(Q to quit)");
             String course = in.nextLine();
 
-            if (course != "Q") {
+            //prompt user for courses until Q is selected
+            if (!course.equals("Q")) {
                 courses = courses + "\n" + course;
                 tuitBalance = tuitBalance + courseAmt;
             } else {
