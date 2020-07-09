@@ -26,6 +26,7 @@ public class DatabaseMenu {
             System.out.println(students[i].acctInfo());
 
         }
+        
     }
-
+    
 }
