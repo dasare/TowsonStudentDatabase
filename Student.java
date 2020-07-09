@@ -10,7 +10,7 @@ public class Student {
     private int classification;
     private static int id = 2000;
     private static int courseAmt = 600;
-    private String courses = null;
+    private String courses;
     private int tuitBalance = 0;
 
     // prompt user to enter name and classifcation year
@@ -60,8 +60,16 @@ public class Student {
     }
 
     // view balance
+    public void viewBalance(){
+        System.out.println("Your balance is: $" + tuitBalance);
+    }
 
     // pay tuition
+    public void payTuition(int payment){
+    tuitBalance = tuitBalance - payment;
+    System.out.println("Thank you for your payment of $" + payment);
+    viewBalance();
+    }
 
     // show status
 
